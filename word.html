@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>word</title>
+    <style>
+        .container {
+            overflow: auto;
+            /* max-width: 940px; */
+            margin: 0 auto;
+        }
+
+        .span8,
+        .span4 {
+            float: center;
+            padding: 10%;
+        }
+
+        .span8 {
+            margin: 0 0 0 20px;
+        }
+
+        .span4 {
+        }
+
+        .well {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 1em;
+            min-height: 200px;
+        }
+
+        .messages .warning {
+            color: #cc6600;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,10 +45,25 @@
         <input type="file" name="docWord" id="docWord">
     </form>
 
-    <div id="output"></div>
+    <!-- <iframe id='word' src='' width='1366px'
+        height='623px' frameborder='0'>This is an embedded <a target='_blank'>Microsoft Office</a>
+        document, powered by</iframe> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.17/mammoth.browser.min.js"></script>
-    <script src="./js/word.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="span8">
+                <div id="output" class="well">
+                </div>
+            </div>
+            <!-- <div class="span4">
+                <h3>Messages</h3>
+                <div id="messages">
+                </div>
+            </div> -->
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.17/mammoth.browser.min.js"></script>
+        <script src="./js/word.js"></script>
 </body>
 
 </html>

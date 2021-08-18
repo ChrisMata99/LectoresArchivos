@@ -216,6 +216,20 @@ async function ModificarPdf(urlImg, numeroPage, positionX, positionY, imgHeight)
     let imageBytes = await fetch(urlImg).then((res) => res.arrayBuffer());
     let pageToModifi = pagesDocumento[numeroPage - 1];
     let typeImage;
+    let rotacion = 0;
+    // Obtiene el tamaño de la librería pdf-lib que puede rotar el pdf si esta horizontal
+    const { width, height } = pageToModifi.getSize();
+    console.log(width, height);
+
+    // Obtiene el tamaño del canvas que se genera no rota el pdf si esta horizontal
+    console.log(canvas.width, canvas.height);
+
+    if(canvas.width > canvas.height){
+        var y = positionX;
+        positionX = positionY;
+        positionY = y;
+    }
+
 
     if (imagen.type == 'image/png') {
         typeImage = await pdfDocumento.embedPng(imageBytes);
@@ -232,7 +246,6 @@ async function ModificarPdf(urlImg, numeroPage, positionX, positionY, imgHeight)
         y: (pageToModifi.getHeight() - positionY) - imgHeight,
         width: imageDims.width,
         height: imageDims.height,
-    })
+    });
+};
 
-
-}

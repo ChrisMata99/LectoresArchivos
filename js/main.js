@@ -141,7 +141,6 @@ async function ModificarPdf(urlImg, numeroPage, positionX, positionY, imgHeight)
     let typeImage;
     // const { width, height } = pageToModifi.getSize();
     // console.log(width, height);
-    // console.log(canvas.width, canvas.height);
 
     if (imagen.type == 'image/png') {
         typeImage = await pdfDocumento.embedPng(imageBytes);
