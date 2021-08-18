@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: #333;
+}
+
+.carga{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.pdf{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenido{
+    width: 100%;
+    max-width: 500px;
+    min-height: 200px;
+    background: #f1f1f1;
+    border-radius: 30px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opciones{
+    background: #f1f1f1;    
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.canvas{
+    margin-top: 10px;
+    min-height: 400px;
+}
+

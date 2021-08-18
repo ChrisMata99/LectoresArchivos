@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visualizador</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+
+    <div class="carga">
+        <div class="contenido">
+            <h1>Visualizador</h1>
+            <form action="" enctype="multipart/form-data">
+                <input type="file" name="pdfFile" id="pdfFile" required accept="application/pdf">
+            </form>
+        </div>
+    </div>
+
+    <div class="pdf">
+        <div class="opciones">
+            <form action="">
+                <input type="file" name="imagen" id="imagen" accept="image/png,image/jpeg" >
+            </form>
+            <button id="descarga">Descargar</button>
+        </div>
+        <div id="main-canvas" class="main-canvas">
+
+        </div>
+
+    </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.5.207/build/pdf.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.16.0/dist/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/downloadjs@1.4.7/download.min.js"></script>
+
+<script src="./js/main.js"></script>
+
+</html>
